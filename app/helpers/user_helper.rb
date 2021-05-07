@@ -2,7 +2,7 @@ module UserHelper
   def invite_link(user)
     return unless current_user != user
 
-    return if current_user.friend?(user)
+    return 'Friend' if current_user.friend?(user)
 
     if current_user.pending_friends.include?(user)
       'Invite pending'
