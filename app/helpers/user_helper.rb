@@ -7,7 +7,7 @@ module UserHelper
     if current_user.pending_friends.include?(user)
       'Invite pending'
     else
-      link_to('Add Friend?', user_friendships_path(user_id: user.id), method: :post, class: 'profile-link')
+      link_to('Add as a Friend', user_friendships_path(user_id: user.id), method: :post, class: 'profile-link')
     end
   end
   def accept_friendship(friendship)
