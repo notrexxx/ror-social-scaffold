@@ -8,11 +8,13 @@ class FriendshipsController < ApplicationController
       redirect_to users_path, alert: 'You cannot invite this friend.'
     end
   end
+
   def update
     friend = User.find(params[:user_id])
     current_user.confirm_friend(friend)
     redirect_to user_path, notice: "you have added #{friend.name} to your friends list "
   end
+
   def destroy
     friend = User.find_by(id: params[:user_id])
     current_user.reject_friend(friend)

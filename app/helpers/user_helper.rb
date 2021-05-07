@@ -10,6 +10,7 @@ module UserHelper
       link_to('Add as a Friend', user_friendships_path(user_id: user.id), method: :post, class: 'profile-link')
     end
   end
+
   def accept_friendship(friendship)
     show_user = User.find_by(id: params[:id])
     (return unless current_user == show_user)
