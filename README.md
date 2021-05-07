@@ -1,93 +1,103 @@
-# Scaffold for social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
-
-## Built With
-
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
-
-## Live Demo
-
-TBA
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
 
-## Getting Started
+# Project: Social media app
 
-To get a local copy up and running follow these simple example steps.
+This repo includes initial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
-### Prerequisites
+# Built With
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+- Ruby on Rails
 
-### Setup
+# Prerequisites
 
-Instal gems with:
+- Ruby 3.0.
+- Rails 6.1.3
+- SQLite3
+- Node.js
+- Yarn
+- Rspec
 
+# Getting Started
+
+- Run this command in your OS terminal: `git clone https://github.com/notrexxx/ror-social-scaffold.git` to get a copy of the project. 
+
+# Usage
+To run the application please:
+
+- Start a new Terminal 
+- Go to the directory where you cloned the Re-form repository
+- Type:
 ```
 bundle install
 ```
+Press ENTER and wait.
 
-Setup database with:
-
+- Type:
 ```
-   rails db:create
-   rails db:migrate
+ rails db:create
 ```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
-
-### Usage
-
-Start server with:
-
+and press ENTER
+- Type:
 ```
-    rails server
+ rails db:migrate
 ```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
+and press ENTER
+- Type:
 ```
-    rpsec --format documentation
+yarn install
 ```
+and press ENTER
+- Type:
+```
+ rails server
+```
+and press ENTER
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+# Use the application
 
-### Deployment
+- Go to http://127.0.0.1:3000/
 
-TBA
+- Sign Up users by using the sign up form
+- Create posts
+- Add comments to the posts
+- Add friends by navigating to 'ALL USERS'
+- Accept or reject friendships by navigating to your profile
+- You can only see your posts and the posts of your friends
 
-## Authors
+# Tests
 
-TBA
+- Start a new Terminal 
+- Go to the directory where you cloned the repository
+- Type:
+```
+rspec
+```
+and press ENTER
 
-## 🤝 Contributing
+# Author
 
-Contributions, issues and feature requests are welcome!
+👤 **Andres Leon**
 
-Feel free to check the [issues page](issues/).
+- GitHub: [@notrexxx](https://github.com/notrexxx)
+- Twitter: [@emigdioleon1](https://twitter.com/emigdioleon1)
+- LinkedIn: [Emigdio Leon](https://linkedin.com/emigdio-leon-689109195)
 
-## Show your support
+# Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+# Contributing
 
-TBA
+Contributions, issues, and feature requests are welcome!
 
-## 📝 License
+Feel free to check the [issues page](https://github.com/notrexxx/ror-social-scaffold/issues).
 
-TBA
+# Acknowledgments
 
+- [Microverse](https://microverse.org)
+
+# 📝 License
+
+This project is [MIT](./LICENSE) licensed.
