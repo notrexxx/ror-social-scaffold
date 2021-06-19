@@ -20,6 +20,7 @@ module UserHelper
   def accept_friendship_with_user(user)
     return if current_user_or_friend?(user)
     return unless current_user.pending_friendship?(user)
+
     friendship = current_user.pending_friendship(user)
 
     link_to('Accept', user_friendship_path(friendship.user, friendship.id), method: :put, class: 'profile-link')
@@ -28,6 +29,7 @@ module UserHelper
   def reject_friendship_with_user(user)
     return if current_user_or_friend?(user)
     return unless current_user.pending_friendship?(user)
+
     friendship = current_user.pending_friendship(user)
 
     link_to('Reject', user_friendship_path(friendship.user, friendship.id), method: :delete, class: 'profile-link')

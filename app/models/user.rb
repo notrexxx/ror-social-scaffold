@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
-     friends_array.compact
+    friends_array.compact
   end
 
   # Users who have yet to confirm friend requests

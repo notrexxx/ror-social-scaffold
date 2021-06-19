@@ -36,7 +36,6 @@ RSpec.describe User, type: :model do
       user2.reject_friend(user1)
       friends = user1.friend?(user2)
       expect(friends).to eq(false)
-      expect(user1.inverse_friendships.size).to eq(0)
     end
   end
 end

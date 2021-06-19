@@ -1,12 +1,10 @@
 class Friendship < ActiveRecord::Base
-
   after_initialize :set_defaults, unless: :persisted?
   after_update :create_inverse, if: :inverse_record_nil?
   after_destroy :destroy_inverse
 
   belongs_to :user
   belongs_to :friend, class_name: 'User'
-
 
   def set_defaults
     self.confirmed = false if confirmed.nil?
@@ -23,7 +21,6 @@ class Friendship < ActiveRecord::Base
   def inverse_record
     Friendship.where(user: friend, friend: user).first
   end
-
 
   def update_inverse
     inf = inverse_record
