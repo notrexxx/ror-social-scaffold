@@ -26,6 +26,18 @@ class User < ApplicationRecord
     Friendship.where(friend_id: id, confirmed: false)
   end
 
+  def pending_requests
+    friend_requests.map(&:user).compact
+  end
+
+  def pending_friendship(user)
+    friend_requests.find { |friendship| friendship if friendship.user == user }
+  end
+
+  def pending_friendship?(user)
+    !pending_friendship(user).nil?
+  end
+
   def confirm_friend(user)
     friendship = friend_requests.find { |f| f.user == user }
     friendship.confirmed = true
