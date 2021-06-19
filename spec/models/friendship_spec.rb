@@ -35,4 +35,11 @@ RSpec.describe Friendship, type: :model do
       expect(Friendship.where(user: new_friendship.friend, friend: new_friendship.user)).not_to be_nil
     end
   end
+
+  describe Friendship do
+    it 'Should belong to user' do
+      t = Friendship.reflect_on_association(:user)
+      expect(t.macro).to eq(:belongs_to)
+    end
+  end
 end
