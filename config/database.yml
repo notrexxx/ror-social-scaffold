@@ -4,12 +4,14 @@ default: &default
   timeout: 5000
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: myapp_development
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: myapp_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: myapp_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
