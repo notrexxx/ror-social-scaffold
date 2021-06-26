@@ -59,7 +59,7 @@ and press ENTER
 ```
 and press ENTER
 
-# Use the application
+# Use the application locally
 
 - Go to http://127.0.0.1:3000/
 
@@ -69,6 +69,10 @@ and press ENTER
 - Add friends by navigating to 'ALL USERS'
 - Accept or reject friendships by navigating to your profile
 - You can only see your posts and the posts of your friends
+
+# Use the application on web
+
+- Go to [SocialApp](https://shrouded-ravine-71018.herokuapp.com/)
 
 # Tests
 
