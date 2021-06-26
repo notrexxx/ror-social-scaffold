@@ -7,7 +7,7 @@
 This repo includes initial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
 
-# LIVE APP: - !(SocialApp)[https://shrouded-ravine-71018.herokuapp.com/]
+# LIVE APP: - ![SocialApp](https://shrouded-ravine-71018.herokuapp.com/)
 
 
 # Built With
