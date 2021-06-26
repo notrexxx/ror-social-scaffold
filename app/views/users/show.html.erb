@@ -4,7 +4,7 @@
     <span>Pending friend requests:</span>
     <%@user.friend_requests.each do |friendship|%>
       <p>
-       <span style="color: green;"> <%=friendship.name%> </span><span>Wants to be your friend</span><br>
+       <span style="color: green;"> <%=friendship.user.name%> </span><span>Wants to be your friend</span><br>
         <br><%= accept_friendship(friendship)%> <br>
         <br><%= reject_friendship(friendship)%>
       </p>

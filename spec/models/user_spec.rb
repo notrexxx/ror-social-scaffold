@@ -14,6 +14,24 @@ RSpec.describe User, type: :model do
       expect(invalid_user).to_not be_valid
     end
   end
+  describe User do
+    it 'Should have many comments' do
+      t = User.reflect_on_association(:comments)
+      expect(t.macro).to eq(:has_many)
+    end
+    it 'Should have many likes' do
+      t = User.reflect_on_association(:likes)
+      expect(t.macro).to eq(:has_many)
+    end
+    it 'Should have many posts' do
+      t = User.reflect_on_association(:posts)
+      expect(t.macro).to eq(:has_many)
+    end
+    it 'Should have many Friends' do
+      t = User.reflect_on_association(:friendships)
+      expect(t.macro).to eq(:has_many)
+    end
+  end
 
   describe 'Friendship request created' do
     it 'User can add friend requests' do
@@ -36,7 +54,6 @@ RSpec.describe User, type: :model do
       user2.reject_friend(user1)
       friends = user1.friend?(user2)
       expect(friends).to eq(false)
-      expect(user1.inverse_friendships.size).to eq(0)
     end
   end
 end
